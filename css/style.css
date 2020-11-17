@@ -1,8 +1,67 @@
+/*DOCUMENT INFORMATION
+- Document : La fabrique du Père Noël
+- Version : 1.0.0
+- Author Karl
+*/
+
+/*CSS DIRECTORY
+
+1=GLOBAL
+2=HEADER
+3=PRESENTATION
+4=FOOTER
+*/
+/*GLOBAL
+===============================================*/
+
 /*HEADER================================*/
 header{
+    margin: 0;
+    padding: 0;
     background: #222;
+    box-sizing: border-box;
     font-family: 'Anton', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+header img{
+    width: 800px;
+
+    transform: rotate(25deg);
+}
+h1{
+    position: relative;
+    color: #222;
+    font-size: 120px;
+    -webkit-text-stroke: 3px #3333338e;
+    text-transform: uppercase;
+
+}
+h1:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #277730;
+    -webkit-text-stroke: 0px #333333;
+    border-right: 2px solid #277730;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+
 /*FOOTER===============================*/
 *{
     margin: 0;
