@@ -5,7 +5,7 @@
 */
 
 /*STYLE
-
+h1 : font-family: 'Anton', sans-serif;
 h2 h3 : font-family: 'Goldman', cursive;
 
 /*CSS DIRECTORY
@@ -18,7 +18,17 @@ h2 h3 : font-family: 'Goldman', cursive;
 */
 /*GLOBAL
 ===============================================*/
-
+h1{
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 100px;
+    -webkit-text-stroke: 3px #222222;
+    text-transform: uppercase;
+    color: #ffffff;
+}
 /*NAVBAR================================*/
 
 nav{
@@ -57,7 +67,7 @@ header img{
 
     transform: rotate(25deg);
 }
-h1{
+.header-title{
     position: relative;
     color: #222;
     font-size: 120px;
@@ -65,7 +75,7 @@ h1{
     text-transform: uppercase;
 
 }
-h1:before{
+.header-title:before{
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -90,9 +100,9 @@ h1:before{
 .presentation{
     display: flex;
     position: relative;
-    height: 120vh;
+    height: 80vh;
     align-items: center;
-    
+    justify-content: space-around;
 }
 .presentation .card{
     position: relative;
@@ -109,7 +119,7 @@ h1:before{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #7f8d63;
+    background: #a84f4f;
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
 }
@@ -141,6 +151,20 @@ h1:before{
     left: 50%;
     transform: translate(10%,-50%) rotate(25deg);
     height: 300px;
+}
+.presentation .card .image .green{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%,-50%) rotate(25deg);
+    height: 200px
+}
+.presentation .card .image .blue{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%,-50%) rotate(25deg);
+    height: 160px
 }
 .presentation .card .content{
     position: absolute;
@@ -242,7 +266,7 @@ h1:before{
 .presentation .card:hover .content a{
     opacity: 1;
     transform: translateY(0px);
-    transition-delay: 1.25s;
+    transition-delay: 1.2s;
 
 }
 /*FOOTER===============================*/
@@ -250,13 +274,19 @@ h1:before{
     margin: 0;
     padding: 0;
 }
+.b-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
     background: #222;
     flex-wrap: wrap;
-    height: 600px;
+    height: 400px;
 }
 ul{
     position: relative;
