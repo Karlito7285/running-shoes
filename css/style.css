@@ -7,12 +7,34 @@
 /*CSS DIRECTORY
 
 1=GLOBAL
+2=NAVBAR
 2=HEADER
 3=PRESENTATION
 4=FOOTER
 */
 /*GLOBAL
 ===============================================*/
+
+/*NAVBAR================================*/
+
+nav{
+    display: flex;
+    background-color: #222222;
+    justify-content: end;
+    
+}
+a{
+    padding-right: 80px; 
+    text-decoration: none;  
+    font-family: 'Goldman', cursive;
+    color: #741ec4;
+}
+h2{
+    font-family: 'Goldman', cursive;
+    text-transform: uppercase;
+    background: #222;
+    color: #741ec4;    
+}
 
 /*HEADER================================*/
 header{
@@ -46,9 +68,9 @@ h1:before{
     left: 0;
     width: 0;
     height: 100%;
-    color: #277730;
+    color: #97d124;
     -webkit-text-stroke: 0px #333333;
-    border-right: 2px solid #277730;
+    border-right: 2px solid #97d124;
     overflow: hidden;
     animation: animate 6s linear infinite;
 }
@@ -60,8 +82,129 @@ h1:before{
         width: 100%;
     }
 }
-
-
+/*PRESENTATION================================*/
+.presentation{
+    position: relative;
+    height: 80vh;
+}
+.presentation .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #333333;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.presentation .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #97d124;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.presentation .card:hover:before{
+    clip-path: circle(300px at 80% -20%)
+}
+.presentation .card:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #97d124;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.presentation .card .img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    height: 220px;
+    transition: 0.5s;
+}
+.presentation .card:hover .img{
+    top: 0%;
+    transform: translateY(0%);
+}
+.presentation .card .img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(25deg);
+    height: 400px;
+}
+.presentation .card .content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.presentation .card:hover .content{
+    height: 210px;
+}
+.presentation .card .content h3{
+    position: relative;
+    font-weight: 600px;
+    color: #ffffff;
+}
+.presentation .card .content .size,
+.presentation .card .content .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+.presentation .card .content .size h4,
+.presentation .card .content .size h4{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.presentation .card .content .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #ffffff;
+    margin: 0 5px;
+    transition: 0.5s;
+}
+.presentation .card .content .size span:hover{
+    background: #97d124;
+}
+.presentation .card .content .color span{
+    width: 20px;
+    height: 20px;
+    background: #97d124;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 3px;
+}
+.presentation .card .content .color span:nth-child(2){
+    background: #97d124;
+}
+.presentation .card .content .color span:nth-child(3){
+    background: #2461d1;
+}
+.presentation .card .content .color span:nth-child(4){
+    background: #f07808;
+}
+.presentation .card .content .color span:nth-child(5){
+    background: #d124c8;
+}
 /*FOOTER===============================*/
 *{
     margin: 0;
@@ -73,7 +216,7 @@ footer{
     align-items: center;
     background: #222;
     flex-wrap: wrap;
-    height: 400px;
+    height: 600px;
 }
 ul{
     position: relative;
