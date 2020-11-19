@@ -12,9 +12,9 @@ h2 h3 : font-family: 'Goldman', cursive;
 
 1=GLOBAL
 2=NAVBAR
-2=HEADER
-3=PRESENTATION
-4=FOOTER
+3=HEADER
+4=PRESENTATION
+5=FOOTER
 */
 /*GLOBAL
 ===============================================*/
@@ -301,6 +301,18 @@ ul li{
     height: 60px;
     margin: 0 10px;
 }
+@media (max-width: 1600px){
+    ul li{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width: 768px){
+    ul li{
+        width: 20px;
+        height: 20px;
+    }
+}
 ul li:before{
     content:'';
     position: absolute;
@@ -375,3 +387,52 @@ ul li:nth-child(3):hover span{
 ul li:nth-child(4):hover span{
     background: #dc0035;
 }
+/*RESPONSIVE=====================================*/
+@media (max-width: 768px){
+    h1{
+        font-size: 60px;
+    }
+}
+@media (max-width: 768px){
+    h2{
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+    a{
+        font-size: 8px;
+    }
+}
+@media (max-width: 768px){
+    .header-title
+    {
+        font-size: 40px;
+    }
+}
+@media (max-width: 1000px){
+    .header-title
+    {
+        font-size: 50px;
+    }
+}
+@media (max-width: 768px){
+    header img
+    {
+        width: 100px;
+    }
+}
+@media (max-width: 1500px){
+    header img
+    {
+        width: 500px;
+    }
+}
+@media (max-width: 1080px){
+    .presentation .card
+    {
+        width: 200px;
+        height: 320px;
+    }
+}
+
+
