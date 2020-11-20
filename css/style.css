@@ -65,6 +65,11 @@ label.logo{
     padding: 0 100px;
     font-weight: bold;
 }
+@media (max-width: 768px){
+    label.logo{
+        font-size: 12px;
+    }
+}
 nav .ul-nav{
     float: right;
     margin-right: 20px;
@@ -462,13 +467,13 @@ footer{
     margin: 0 10px;
 }
 @media (max-width: 1600px){
-    ul li{
+    .ul-contact .li-contact{
         width: 30px;
         height: 30px;
     }
 }
 @media (max-width: 768px){
-    ul li{
+    .ul-contact .li-contact{
         width: 20px;
         height: 20px;
     }
