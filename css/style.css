@@ -45,26 +45,77 @@ h1{
     }
 }
 /*NAVBAR================================*/
-
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 nav{
-    display: flex;
-    background-color: #222222;
-    justify-content: end;
-    
+    background: #333333;
+    height: 80px;
+    width: 100%;
 }
-a{
-    padding-right: 80px; 
-    text-decoration: none;  
-    font-family: 'Goldman', cursive;
-    color: #741ec4;
+label.logo{
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
 }
-h2{
-    font-family: 'Goldman', cursive;
-    text-transform: uppercase;
-    background: #222;
-    color: #741ec4;    
+nav .ul-nav{
+    float: right;
+    margin-right: 20px;
 }
-
+nav .ul-nav .li-nav{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav .ul-nav .li-nav .btn-navbar{
+    color: #ffffff;
+    font-size: 17px;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+}
+nav ul li a{
+    font-size: 16px;
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+}
 /*HEADER================================*/
 header{
     margin: 0;
@@ -347,7 +398,7 @@ header img{
 .presentation .card .content .color span:nth-child(5){
     background: #d124c8;
 }
-.presentation .card .content a{
+.presentation .card .content .btn-buy{
     display: inline-block;
     padding: 10px 20px;
     background: #ffffff;
@@ -359,18 +410,22 @@ header img{
     opacity: 0;
     transform: translateY(50px);
     transition: 0.5s;
+    font-family: 'Goldman', cursive;
+
 }
-.presentation .card:hover .content a{
+.presentation .card:hover .content .btn-buy{
     opacity: 1;
     transform: translateY(0px);
     transition-delay: 1.2s;
+    font-family: 'Goldman', cursive;
 
 }
-/*FOOTER===============================*/
-*{
-    margin: 0;
-    padding: 0;
+.presentation .card .content .btn-buy:hover{
+    background: #a84f4f;
+    transition: 0.5s;
 }
+/*FOOTER===============================*/
+
 .b-footer{
     display: flex;
     justify-content: center;
@@ -385,13 +440,13 @@ footer{
     flex-wrap: wrap;
     height: 400px;
 }
-ul{
+.ul-contact{
     position: relative;
     display: flex;
     transform-style: preserve-3d;
     transform: rotate(-25deg) skew(25deg);
 }
-ul li{
+.ul-contact .li-contact{
     position: relative;
     list-style: none;
     width: 60px;
@@ -410,7 +465,7 @@ ul li{
         height: 20px;
     }
 }
-ul li:before{
+.ul-contact .li-contact:before{
     content:'';
     position: absolute;
     bottom: -10px;
@@ -421,7 +476,7 @@ ul li:before{
     transform-origin: top;
     transform: skewX(-41deg);
 }
-ul li:after{
+.ul-contact .li-contact:after{
     content:'';
     position: absolute;
     top: 0;
@@ -432,7 +487,7 @@ ul li:after{
     transform-origin: right;
     transform: skewY(-49deg);
 }
-ul li span{
+.ul-contact .li-contact span{
     position: absolute;
     top: 0;
     left: 0;
@@ -446,42 +501,42 @@ ul li span{
     font-size: 30px !important;
     transition: 0.2s;
 }
-ul li:hover span{
+.ul-contact .li-contact:hover span{
     z-index: 1000;
     transition: 0.5s;
     color: #ffffff;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
 }
-ul li:hover span:nth-child(5){
+.ul-contact .li-contact:hover span:nth-child(5){
     transform: translate(40px,-40px);
     opacity: 1;
 }
-ul li:hover span:nth-child(4){
+.ul-contact .li-contact:hover span:nth-child(4){
     transform: translate(30px,-30px);
     opacity: 0.8;
 }
-ul li:hover span:nth-child(3){
+.ul-contact .li-contact:hover span:nth-child(3){
     transform: translate(20px,-20px);
     opacity: 0.6;
 }
-ul li:hover span:nth-child(2){
+.ul-contact .li-contact:hover span:nth-child(2){
     transform: translate(10px,-10px);
     opacity: 0.4;
 }
-ul li:hover span:nth-child(1){
+.ul-contact .li-contact:hover span:nth-child(1){
     transform: translate(0px,-0px);
     opacity: 0.2;
 }
-ul li:nth-child(1):hover span{
+.ul-contact .li-contact:nth-child(1):hover span{
     background: #3f4d98;
 }
-ul li:nth-child(2):hover span{
+.ul-contact .li-contact:nth-child(2):hover span{
     background: #5eb6e3;
 }
-ul li:nth-child(3):hover span{
+.ul-contact .li-contact:nth-child(3):hover span{
     background: #44c052;
 }
-ul li:nth-child(4):hover span{
+.ul-contact .li-contact:nth-child(4):hover span{
     background: #dc0035;
 }
 
